@@ -1,4 +1,17 @@
+:root{
+  --primary-red: #FF4433; 
+  --primary-blue: #3B5998;
+  --text-large: 1.5rem;
+  --text-medium: 1.2rem;
+  --text-small: 1rem;
+  --font-weight-large: 700;
+  --font-weight-medium: 500;
+  --font-weight-small: 400;
+}
+
 body {
+  font-size: var(--text-medium);
+  font-weight: var(--font-weight-medium);
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',

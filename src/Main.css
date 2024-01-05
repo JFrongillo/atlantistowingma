@@ -1,0 +1,77 @@
+.header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* Aligns children to the edges */
+  align-items: center; /* Aligns children vertically in the center */
+  background-color: var(--primary-blue);
+  padding-right: 1em;
+  padding-left: 1em; 
+  height: 150px;
+}
+
+.header-item {
+  color: white;
+  font-weight: var(--font-weight-large);
+}
+
+.header-item:nth-child(2) { /* Assuming this is your navigation container */
+  flex-grow: 1; /* Takes up the remaining space */
+  display: flex;
+  justify-content: center; /* Center the navigation inside the item */
+
+}
+
+.header-item >ul{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  list-style-type: none;
+  gap: 2em;
+  padding: 0; 
+}
+
+.header-logo {
+  background-image: url(../public/atlantistowingmalogo.png);
+  width: 200px;
+  height: 150px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.dropdown-container {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  left: 0;
+  top: 100%; /* Position it right below the Services item */
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-menu li {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-menu li:hover {
+  background-color: #f1f1f1;
+}
+
+
+
+
+
+
+
+
