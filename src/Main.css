@@ -1,24 +1,16 @@
 .header-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between; /* Aligns children to the edges */
+  justify-content: space-around;
   align-items: center; /* Aligns children vertically in the center */
   background-color: var(--primary-blue);
-  padding-right: 1em;
-  padding-left: 1em; 
   height: 150px;
 }
 
 .header-item {
   color: white;
   font-weight: var(--font-weight-large);
-}
-
-.header-item:nth-child(2) { /* Assuming this is your navigation container */
-  flex-grow: 1; /* Takes up the remaining space */
-  display: flex;
-  justify-content: center; /* Center the navigation inside the item */
-
+  font-size: var(--text-large);
 }
 
 .header-item >ul{
@@ -26,6 +18,7 @@
   flex-direction: row;
   align-items: center;
   list-style-type: none;
+  cursor: pointer;
   gap: 2em;
   padding: 0; 
 }

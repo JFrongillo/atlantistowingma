@@ -30,6 +30,9 @@ function MainPage() {
           </div>
         </ul>
       </div>
+      <div className="header-item">
+        <a href="#">Contact Us</a>
+      </div>
     </div>
   );
 }
