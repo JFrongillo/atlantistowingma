@@ -1,7 +1,7 @@
-import './Main.css';
+import './Header.css';
 import React,  {useState}from 'react';
 
-function MainPage() {
+export default function Header() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const toggleDropdown = () => {
@@ -37,4 +37,3 @@ function MainPage() {
   );
 }
 
-export default MainPage;
