@@ -9,19 +9,19 @@ export default function Header() {
   }
 
   return (
-    <div className="header-container">
-      <div className="header-item">
-        <div className="header-logo"/>
+    <div class="header-container">
+      <div class="header-item">
+        <div class="header-logo"/>
       </div>
-      <div className="header-item">
-        <ul>
+      <div class="header-item">
+        <ul class = "nav-items">
           <li>Home</li>
           <li>About Us</li>
           <li>Testimonials</li>
-          <div className="dropdown-container">
+          <div class="dropdown-container">
             <li onClick={toggleDropdown}>Services</li>
             {isDropdownOpen && (
-              <ul className="dropdown-menu">
+              <ul class="dropdown-menu">
                 <li>Service 1</li>
                 <li>Service 2</li>
                 <li>Service 3</li>
@@ -30,7 +30,7 @@ export default function Header() {
           </div>
         </ul>
       </div>
-      <div className="header-item">
+      <div class="header-item">
         <a href="#">Contact Us</a>
       </div>
     </div>

@@ -5,7 +5,7 @@
   align-items: center; /* Aligns children vertically in the center */
   background-color: var(--primary-blue-faded);
   height: 150px;
-  border: var(--border-shadow);
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
 .header-item {
@@ -34,6 +34,26 @@
   cursor: pointer;
   gap: 2em;
   padding: 0; 
+}
+
+.nav-items > li {
+  position: relative; /* Ensure the pseudo-element is positioned relative to the list item */
+}
+
+.nav-items > li:after {
+  display: block;
+  content: '';
+  border-bottom: solid 3px white;
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+  position: absolute; /* Position the pseudo-element absolutely within the list item */
+  left: 0;
+  right: 0;
+  bottom: 0; /* Position it at the bottom of the list item */
+}
+
+.nav-items > li:hover:after {
+  transform: scaleX(1); /* Scale the element to full width on hover */
 }
 
 .header-logo {
