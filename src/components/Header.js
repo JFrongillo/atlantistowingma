@@ -19,7 +19,7 @@ export default function Header() {
           <li>About Us</li>
           <li>Testimonials</li>
           <div class="dropdown-container">
-            <li onClick={toggleDropdown}>Services</li>
+            <li onClick={toggleDropdown} class = {isDropdownOpen ? `active` : ''}>Services</li>
             {isDropdownOpen && (
               <ul class="dropdown-menu">
                 <li>Service 1</li>
