@@ -129,6 +129,7 @@
   list-style-type: none;
   padding: 0;
   margin: 0;
+  margin-top: 10px;
   position: absolute;
   left: 0;
   top: 100%; /* Position it right below the Services item */
@@ -143,6 +144,19 @@
   padding: 12px 16px;
   text-decoration: none;
   display: block;
+}
+
+.dropdown-container > li:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 10px; 
+  transition: all 0.5s;
+}
+
+.dropdown-container > li.active:after {
+  content: "\2212";
 }
 
 .dropdown-menu li:hover {
