@@ -54,10 +54,10 @@ export default function Header() {
             <li>Home</li>
             <li>About Us</li>
             <li>Testimonials</li>
-            <div class="dropdown-container">
+            <div class="dropdown-container-mobile">
               <li onClick={toggleDropdown}>Services</li>
               {isDropdownOpen && (
-                <ul class="dropdown-menu">
+                <ul class="dropdown-menu-mobile">
                   <li>Towing</li>
                   <li>Storage</li>
                   <li>Tire Change</li>
