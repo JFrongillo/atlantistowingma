@@ -6,6 +6,10 @@ import Header from './components/Header';
 
 //Importing visable pages Pages
 import Main from './pages/main/Main';
+import About from './pages/about/About';
+
+//Importing error page
+import NotFound from './pages/404/NotFound';
 
 export default function App() {
   return (
@@ -14,6 +18,8 @@ export default function App() {
         <div>
             <Routes>
                 <Route path="/" element={<Main />} />
+                <Route path="/about" element={<About />} />
+                <Route path="*" element={<NotFound/>} />
             </Routes>
         </div>
     </div>

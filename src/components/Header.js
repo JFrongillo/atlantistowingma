@@ -1,5 +1,6 @@
 import './Header.css';
 import React,  {useState}from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Header() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -16,14 +17,14 @@ export default function Header() {
   return (
     <div class="header-container">
       <div class="header-item">
-        <div class="header-logo"/>
+        <div class="header-logo"></div>
       </div>
       
       <div class="header-item">
         <ul class = "nav-items">
-          <li>Home</li>
-          <li>About Us</li>
-          <li>Testimonials</li>
+          <li><Link to = "/">Home</Link></li>
+          <li><Link to = "/about">About Us</Link></li>
+          <li><Link to = "/#testimonials">Testimonials</Link></li>
           <div class="dropdown-container">
             <li onClick={toggleDropdown} class = {isDropdownOpen ? `active` : ''}>Services</li>
             {isDropdownOpen && (
@@ -51,9 +52,9 @@ export default function Header() {
       {isMobileOpen && (
         <div class="mobile-menu">
           <ul class="mobile-menu-items">
-            <li>Home</li>
-            <li>About Us</li>
-            <li>Testimonials</li>
+          <li><Link to = "/">Home</Link></li>
+          <li><Link to = "/about">About Us</Link></li>
+          <li><Link to = "/#testimonials">Testimonials</Link></li>
             <div class="dropdown-container-mobile">
               <li onClick={toggleDropdown}>Services</li>
               {isDropdownOpen && (

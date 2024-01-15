@@ -152,6 +152,11 @@
   list-style: none;
 }
 
+.mobile-menu-items li a{
+  text-decoration: none;
+  color: black;
+}
+
 .mobile-menu-items li:hover{
   background-color: #f1f1f1;
   width: 100%;
