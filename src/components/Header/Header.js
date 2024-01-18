@@ -17,7 +17,7 @@ export default function Header() {
   return (
     <div class="header-container">
       <div class="header-item">
-        <div class="header-logo"></div>
+        <div class="header-logo"/>
       </div>
       
       <div class="header-item">

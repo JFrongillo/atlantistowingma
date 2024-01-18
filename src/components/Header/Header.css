@@ -58,7 +58,7 @@
 }
 
 .header-logo {
-  background-image: url(../../public/atlantistowingmalogo.png);
+  background-image: url(./atlantistowingmalogo.png);
   width: 200px;
   height: 150px;
   background-size: contain;
@@ -181,7 +181,7 @@
   /* Hide your regular menu items here */
   .header-item > ul,
   .header-item > a {
-    display: none !important;
+    display: none;
   }
 }
 

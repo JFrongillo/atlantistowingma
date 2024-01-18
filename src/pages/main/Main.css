@@ -1,0 +1,44 @@
+.hero-container{
+    position: relative; 
+    background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url(./bostonskyline.jpg);
+    background-size: cover; 
+    background-position: center;
+    height: 50vh;
+    display: flex; 
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left; 
+    padding-left: 20px; 
+    padding-right: 20px; 
+}
+
+.hero-container h1,
+.hero-container h2,
+.hero-container p,
+.hero-container a {
+  color: white; /* Choose a color that contrasts well with your image */
+  margin: 0.5em 0; /* Adjust spacing as needed */
+}
+
+.hero-container h1 {
+  font-size: 5em;
+}
+
+.hero-container h2 {
+  font-size: 2em;
+  font-style: italic;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.company-name h1, 
+.company-name h2{
+   margin: 0; 
+}
+
+.company-name{
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 500px; 
+}   
