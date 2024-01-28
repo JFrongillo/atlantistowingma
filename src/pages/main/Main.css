@@ -1,9 +1,16 @@
+.main-container{
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .hero-container{
     position: relative; 
-    background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url(./bostonskyline.jpg);
+    background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url(./images/bostonskyline.jpg);
     background-size: cover; 
     background-position: center;
     height: 50vh;
+    width: 100%; 
     display: flex; 
     flex-direction: column;
     justify-content: flex-start;
@@ -27,12 +34,17 @@
 .hero-container h2 {
   font-size: 2em;
   font-style: italic;
-  font-family: 'Times New Roman', Times, serif;
+  
 }
 
 .company-name h1, 
 .company-name h2{
    margin: 0; 
+}
+
+.company-name h2{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3em;
 }
 
 .company-name{
@@ -42,3 +54,43 @@
     align-items: center;
     height: 500px; 
 }   
+
+.about-container{
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about{
+    display: flex; 
+    flex-direction:row;
+    justify-content: center;
+    gap: 20px;
+    background-color: black;
+    color: white; 
+    padding: 50px; 
+    margin-top: 10px;
+} 
+
+.about-image{
+    background-image: url(./images/towtruck.jpg);
+    background-size:contain; 
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 550px;  /* Adjusted width */
+    height: 460px; /* Adjusted height */
+    margin: 0 auto; /* Center the image container */
+}
+
+.about-text{
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 450px; 
+    height: 460px; 
+    margin: 0 auto; 
+}
+
+

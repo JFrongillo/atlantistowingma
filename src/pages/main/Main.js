@@ -7,22 +7,24 @@ export default function Main() {
                 <div class = "company-name">
                     <h1>Atlanits Towing</h1>
                     <h2>We met by accident</h2>
-                    <p>Reliable towing for the New England area.</p>
                 </div>
                 <div className="hero-tagline-container">
                     <div className="hero-tagline">
-                        <h2></h2>
+                        <h2>Reliable towing for the New England area.</h2>
+                        <p></p>
                        <a href = "#">Contact Us Now!</a> 
                     </div>
                 </div>
-                
             </div>
-            <hr />
             <div class="about-container">
-                <h1>About Us</h1>
-                <p>Atlantis Towing is a family owned and operated business that has been providing towing services in the Massachusetts area for over 20 years. We are a fully licensed and insured company that is committed to providing our customers with the highest level of service. We offer a wide range of services including towing, roadside assistance, and more. Our team of professionals will work with you to find the best solution for your needs. Contact us today for more information!</p>
+                <div class="about">
+                    <div className="about-image"/>
+                    <div className="about-text">
+                        <h1>About Us</h1>
+                        <p>Atlantis Towing is a family owned and operated business that has been providing towing services in the Massachusetts area for over 20 years. We are a fully licensed and insured company that is committed to providing our customers with the highest level of service. We offer a wide range of services including towing, roadside assistance, and more. Our team of professionals will work with you to find the best solution for your needs. Contact us today for more information!</p>
+                    </div>
+                </div> 
             </div>
-            <hr />
             <div class="services-container">
                 <h1>Our Services</h1>
                 <div class="services-cards">
@@ -56,7 +58,6 @@ export default function Main() {
                     </div>
                 </div>
             </div>
-            <hr />
             <div class="screenshots-container">
 
             </div>
