@@ -3,7 +3,7 @@
   --primary-blue: #3B5998;
   --primary-blue-faded: rgb(59, 89, 152, 0.5);
   --border-shadow: solid rgba(155, 155, 155, 0.068) 2px;
-  --text-large: 1.5rem;
+  --text-large: 2rem;
   --text-medium: 1.2rem;
   --text-small: 1rem;
   --font-weight-large: 700;
@@ -13,7 +13,7 @@
 
 body {
   font-size: var(--text-medium);
-  font-weight: var(--font-weight-medium);
+  font-weight: var(--font-weight-small);
   background-color: black;
   color: white;
   margin: 0;

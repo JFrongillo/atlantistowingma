@@ -26,35 +26,27 @@ export default function Main() {
                 </div> 
             </div>
             <div class="services-container">
-                <h1>Our Services</h1>
+                <h1>We Offer an Array of Services:</h1>
                 <div class="services-cards">
                     <div class="services-card">
-                        <div class="services-card-icon"></div>
+                        <div class="services-card-icon towing"></div>
                         <h2>Towing</h2>
                         <p>With our reliable towing service and wide fleet of veichles, we can tow: cars, trucks, SUV's, minivans, and even trucks that transport water tanks.</p>
                     </div>
                     <div class="services-card">
-                        <div class="services-card-icon"></div>
+                        <div class="services-card-icon garage"></div>
                         <h2>Storage</h2>
-                        <p>Enjoy peace of mind with our secure vehicle storage services, 
-                        where advanced security systems ensure the safety of your vehicle. 
-                        Our facility accommodates a variety of vehicles, 
-                        providing reliable short-term or long-term storage with full legal compliance.</p>
+                        <p>Benefit from our secure vehicle storage services, offering advanced security and full legal compliance for both short-term and long-term needs.</p>
                     </div>
                     <div class="services-card">
-                        <div class="services-card-icon"></div>
+                        <div class="services-card-icon battery"></div>
                         <h2>Tire Changes and Jumpstarts</h2>
-                        <p>Have a flat tire or need a quick battery jump?! Our swift roadside assistance service is here to help with flat tire changes and battery jumps, getting you back on the road in no time! </p>
+                        <p>Our rapid roadside assistance service efficiently handles flat tires and battery jumps, ensuring you're back on the road swiftly!</p>
                     </div>
                     <div class="services-card">
-                        <div class="services-card-icon"></div>
+                        <div class="services-card-icon wrench"></div>
                         <h2>Mechanical Works</h2>
                         <p>We offer an in house mechanic shop where experienced technicians provide a wide range of repair and maintenance services, ensuring your vehicle is running at its best.</p>
-                    </div>
-                    <div class="services-card">
-                        <div class="services-card-icon"></div>
-                        <h2>Collison Repair</h2>
-                        <p>Our collision repair service specializes in restoring vehicles to their original condition after accidents. Utilizing advanced tools and techniques, we ensure your vehicle receives top-quality care for a flawless finish.</p>
                     </div>
                 </div>
             </div>
