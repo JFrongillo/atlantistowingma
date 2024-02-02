@@ -26,14 +26,9 @@
 }
 
 .hero-container h1 {
-  font-size: 5em;
+  font-size: 10em;
 }
 
-.hero-container h2 {
-  font-size: 2em;
-  font-style: italic;
-  
-}
 
 .company-name h1, 
 .company-name h2{
@@ -42,7 +37,8 @@
 
 .company-name h2{
     font-family: 'Times New Roman', Times, serif;
-    font-size: 3em;
+    font-size: 8em;
+  font-style: italic;
 }
 
 .company-name{
@@ -157,12 +153,32 @@
     background-image: url(./images/gear-tools-wrench-svgrepo-com.svg);
 }
 
+@media screen and (max-width: 1400px){
+    .company-name h1{
+        font-size: 6em;
+    }
+    .company-name h2{
+        font-size: 4em;
+    }
+}
+
 
 @media screen and (max-width: 1024px) {
     .hero-container{
         font-size: var(--text-extra-small);
         height: 50vh;
     }
+
+    .company-name h1{
+        font-size: 4em;
+    }
+    .company-name h2{
+        font-size: 3em;
+    }
+    .hero-tagline a{
+        font-size: var(--text-small);
+    }
+
     .about{
         flex-direction: column;
         gap: 10px; 

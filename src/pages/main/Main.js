@@ -8,13 +8,7 @@ export default function Main() {
                     <h1>Atlanits Towing</h1>
                     <h2>We met by accident</h2>
                     <h3>Reliable towing for the New England area.</h3>
-                </div>
-                <div className="hero-tagline-container">
-                    <div className="hero-tagline">
-                        <h2>Reliable towing for the New England area.</h2>
-                        <p></p>
-                       <a href = "tel:7814851800">Contact Us Now!</a> 
-                    </div>
+                    <a href = "tel:7814851800">Contact Us Now!</a> 
                 </div>
             </div>
             <div class="about-container">
