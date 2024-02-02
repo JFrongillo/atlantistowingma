@@ -40,7 +40,7 @@ export default function Header() {
         </ul>
       </div>
       <div class="header-item">
-        <a href="tel:(781) 371-8468">Emergency Call</a>
+        <a href="tel:7814851800">Emergency Call</a>
       </div>
       
       <div class ="hamburger header-item" onClick = {toggleMobile}>

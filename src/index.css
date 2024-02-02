@@ -3,9 +3,10 @@
   --primary-blue: #3B5998;
   --primary-blue-faded: rgb(59, 89, 152, 0.5);
   --border-shadow: solid rgba(155, 155, 155, 0.068) 2px;
-  --text-large: 2rem;
-  --text-medium: 1.2rem;
-  --text-small: 1rem;
+  --text-large: 2em;
+  --text-medium: 1.2em;
+  --text-small: 1em;
+  --text-extra-small: 0.8em;
   --font-weight-large: 700;
   --font-weight-medium: 500;
   --font-weight-small: 400;
@@ -24,4 +25,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+@media screen and (max-width: 600px) {
+  body {
+    font-size: var(--text-small);
+  }
+  
+}
 

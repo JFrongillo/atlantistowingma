@@ -7,12 +7,13 @@ export default function Main() {
                 <div class = "company-name">
                     <h1>Atlanits Towing</h1>
                     <h2>We met by accident</h2>
+                    <h3>Reliable towing for the New England area.</h3>
                 </div>
                 <div className="hero-tagline-container">
                     <div className="hero-tagline">
                         <h2>Reliable towing for the New England area.</h2>
                         <p></p>
-                       <a href = "#">Contact Us Now!</a> 
+                       <a href = "tel:7814851800">Contact Us Now!</a> 
                     </div>
                 </div>
             </div>
@@ -26,7 +27,7 @@ export default function Main() {
                 </div> 
             </div>
             <div class="services-container">
-                <h1>We Offer an Array of Services:</h1>
+                <h1>We Offer Most Services:</h1>
                 <div class="services-cards">
                     <div class="services-card">
                         <div class="services-card-icon towing"></div>
@@ -45,8 +46,8 @@ export default function Main() {
                     </div>
                     <div class="services-card">
                         <div class="services-card-icon wrench"></div>
-                        <h2>Mechanical Works</h2>
-                        <p>We offer an in house mechanic shop where experienced technicians provide a wide range of repair and maintenance services, ensuring your vehicle is running at its best.</p>
+                        <h2>Vehicle Repairs</h2>
+                        <p>Our in-house mechanic shop features skilled technicians for comprehensive repair and maintenance, ensuring your vehicle's optimal performance.</p>
                     </div>
                 </div>
             </div>
