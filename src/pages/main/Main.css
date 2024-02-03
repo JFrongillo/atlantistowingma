@@ -4,16 +4,17 @@
     justify-content: center;
     align-items: center;
 }
+
 .hero-container{
     position: relative; 
     background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url(./images/bostonskyline.jpg);
     background-size: cover; 
     background-position: center;
-    height: 95vh;
+    height: 75vh;
     width: 100%; 
     display: flex; 
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     text-align: left;  
 }
 
@@ -38,7 +39,11 @@
 .company-name h2{
     font-family: 'Times New Roman', Times, serif;
     font-size: 8em;
-  font-style: italic;
+    font-style: italic;
+}
+
+.company-name h3{
+    font-size: 2em; 
 }
 
 .company-name{
@@ -46,8 +51,26 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 500px; 
+    height: 500px;
+    padding: 20px; 
 } 
+
+.company-name > a{
+    color: white; 
+    text-decoration: none; 
+    background-color: rgb(132, 136, 132, 0.8);
+    font-weight: var(--font-weight-medium);
+    padding: 20px;
+    border-radius: 5px;
+    font-size: var(--text-small);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 1);
+    margin: 0;
+}
+
+.company-name > a:hover{
+    background-color: rgb(132, 136, 132);
+    color: black; 
+}
 
 .hero-tagline a{ 
     font-weight: bold;
@@ -59,9 +82,7 @@
     flex-direction: column;
     justify-content: center;
     background-color:rgba(132, 136, 132, 0.4);
-    width: 100%;  
-    padding-left: 50px; 
-    padding-right: 50px;
+    width: 100%; 
 }
 
 .about{
@@ -103,12 +124,13 @@
     display: flex; 
     flex-direction: row;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
     background-color: black;
     color: white; 
     padding-left: 50px;
     padding-right: 50px;
     margin-top: 10px;
+    margin-bottom: 10px; 
 }
 
 .services-card{
@@ -116,24 +138,39 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     max-width: 300px; 
-    max-height: 400px; 
+    max-height: 500px; 
     padding: 20px;
     overflow: hidden; 
 }
 
-.services-card h2{
+.card-text{
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    color: white; 
+}
+
+.card-text h2{
     font-size: var(--text-large); 
 }
 
+.card-text p{
+    font-size: var(--text-small); 
+}
+
 .services-card-icon{
-    width: 100%; /* Adjust based on parent container width */
-    height: 0; /* Set height to 0 to use padding-top for aspect ratio */
-    padding-top: 25%; /* Height/Width ratio (400px height / 300px width) * 100 */
+    width: 100%; 
+    height: 0; 
+    padding-top: 25%; 
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    position: relative; /* Ensure the padding-top trick works for aspect ratio */
+    margin-bottom: 10px;
+    position: relative; 
 }
 
 
