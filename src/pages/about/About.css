@@ -1,0 +1,40 @@
+.about-hero-container{
+    position: relative; 
+    background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url(./images/banner-img2.jpg);
+    background-size: cover; 
+    background-position: center;
+    height: 45vh;
+    width: 100%; 
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;  
+}
+
+.about-hero-container h1{
+    color: white; 
+    margin: 0.5em 0; 
+    font-size: 5em;
+    text-align: center;
+}
+
+.about-content-container{
+    display: grid; 
+    gap: .5rem; 
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: ". section .";
+}
+
+.about-content{
+    grid-area: section;
+}
+
+.about-content p > a{
+    color: #f1356d; 
+    text-decoration: none; 
+    font-weight: var(--font-weight-large); 
+}
+
+.subsection{
+    font-weight: var(--font-weight-large);
+}
