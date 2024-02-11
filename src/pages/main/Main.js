@@ -57,13 +57,35 @@ export default function Main() {
                     </div>
                 </div>
             </div>
-            <div class="guarantee-container">
+            <div class="guarantee-container" id = "testimonials">
                 <div class="guarantee-text">
                     <h1>Professional Roadside Assistance Services Is One Phone Call Away in Revere, MA</h1>
                     <p>At Atlantis Towing, we are committed to providing our customers with the highest level of service. Our team of professionals will work with you to find the best solution for your needs. We are available 24/7 to assist you with all of your towing and roadside assistance needs. Contact us today for more information!</p>
                 </div>
                 <div class = "reviews-container">
-                    
+                    <div class = "review-head">
+                        <h1>See What Our Customers Have to Say</h1>
+                    </div>
+                    <div class = "review r1">
+                        <h2>Test Name</h2>
+                        <div class = "five-star"/>
+                        <p>"I was very impressed with the service I received from Atlantis Towing. They were very professional and efficient. I would definitely recommend them to anyone in need of towing services."</p>
+                    </div>
+                    <div class = "review r2">
+                        <h2>Test Name</h2>
+                        <div class = "five-star"/>
+                        <p>"I was very impressed with the service I received from Atlantis Towing. They were very professional and efficient. I would definitely recommend them to anyone in need of towing services."</p>
+                    </div>
+                    <div class = "review r3">
+                        <h2>Test Name</h2>
+                        <div class = "five-star"/>
+                        <p>"I was very impressed with the service I received from Atlantis Towing. They were very professional and efficient. I would definitely recommend them to anyone in need of towing services."</p>
+                    </div>
+                    <div class = "review r4">
+                        <h2>Test Name</h2>
+                        <div class = "five-star"/>
+                        <p>"I was very impressed with the service I received from Atlantis Towing. They were very professional and efficient. I would definitely recommend them to anyone in need of towing services."</p>
+                    </div>
                 </div>
             </div>
         </div>

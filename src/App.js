@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 
 //Importing Header and **FUTURE** Footer Components
 import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 
 //Importing visable pages Pages
 import Main from './pages/main/Main';
@@ -22,6 +23,7 @@ export default function App() {
                 <Route path="*" element={<NotFound/>} />
             </Routes>
         </div>
+        <Footer />
     </div>
   );
 }

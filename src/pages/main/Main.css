@@ -97,7 +97,7 @@
 } 
 
 .about-image{
-    background-image: url(./images/towtruck.jpg);
+    background-image: url(./images/towtruck2.jpg);
     background-size:contain; 
     background-repeat: no-repeat;
     background-position: center;
@@ -270,6 +270,47 @@
         text-align:  center;
         padding: 10px 100px 10px;
     }
+
 }
 
+.reviews-container{
+    display: grid; 
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: ". shead shead ."
+                         ". r1 r2 ."
+                         ". r3 r2 ."
+                         ". r4 r4 .";
+}
+
+.review{
+    background-color: rgba(132, 136, 132, 0.4);
+    padding: 20px;
+    margin: 10px;
+}
+
+.review-head{
+    grid-area: shead;
+    text-align: center;
+}
+
+.r1{
+    grid-area: r1;
+    background-color: rgba(132, 136, 132, 0.4);
+}
+
+.r2{
+    grid-area: r2;
+    background-color: rgba(132, 136, 132, 0.4);
+}
+
+.r3{
+    grid-area: r3;
+    background-color: rgba(132, 136, 132, 0.4);
+}
+
+.r4{
+    grid-area: r4;
+    background-color: rgba(132, 136, 132, 0.4);
+}
 

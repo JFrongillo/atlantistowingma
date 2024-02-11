@@ -1,0 +1,34 @@
+.footer-container{
+    display: grid; 
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: ". tagline services contact . ";
+}
+
+.footer-container ul{
+    list-style: none; 
+}
+
+.footer-container a{
+    color: white; 
+    text-decoration: none; 
+}
+
+.footer-container a:hover{
+    color: rgb(132, 136, 132); 
+}
+
+.footer-tagline{
+    grid-area: tagline; 
+    text-align: center; 
+}
+
+.footer-services{ 
+    grid-area: services;
+    text-align: center;
+}
+
+.footer-contact{
+    grid-area: contact; 
+    text-align: center; 
+}
