@@ -14,6 +14,8 @@ export default function Header() {
     setIsMobileOpen(!isMobileOpen);
   }
 
+
+
   return (
     <div class="header-container">
       <div class="header-item">
@@ -29,7 +31,7 @@ export default function Header() {
             <li onClick={toggleDropdown} class = {isDropdownOpen ? `active` : ''}>Services</li>
             {isDropdownOpen && (
               <ul class="dropdown-menu">
-                <li>Towing</li>
+                <li><Link to = "/towing">Towing</Link></li>
                 <li>Storage</li>
                 <li>Tire Change</li>
                 <li>Mechanical Works</li>
@@ -59,7 +61,7 @@ export default function Header() {
               <li onClick={toggleDropdown}>Services</li>
               {isDropdownOpen && (
                 <ul class="dropdown-menu-mobile">
-                  <li>Towing</li>
+                  <li><Link to = "/towing">Towing</Link></li>
                   <li>Storage</li>
                   <li>Tire Change</li>
                   <li>Mechanical Works</li>

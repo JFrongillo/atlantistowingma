@@ -8,6 +8,7 @@ import Footer from './components/Footer/Footer';
 //Importing visable pages Pages
 import Main from './pages/main/Main';
 import About from './pages/about/About';
+import Towing from './pages/towing/Towing';
 
 //Importing error page
 import NotFound from './pages/404/NotFound';
@@ -20,6 +21,7 @@ export default function App() {
             <Routes>
                 <Route path="/" element={<Main />} />
                 <Route path="/about" element={<About />} />
+                <Route path="/towing" element={<Towing />} />
                 <Route path="*" element={<NotFound/>} />
             </Routes>
         </div>

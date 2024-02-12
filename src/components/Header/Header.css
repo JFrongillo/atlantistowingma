@@ -93,6 +93,14 @@
   display: block;
 }
 
+.dropdown-menu li > a{
+  color: black; 
+}
+
+.dropdown-menu li > a:visited{
+  color: black; 
+}
+
 .dropdown-container > li:after {
   content: '\002B';
   color: white;

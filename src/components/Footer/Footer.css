@@ -3,6 +3,7 @@
     gap: 1rem;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas: ". tagline services contact . ";
+    text-align: center;
 }
 
 .footer-container ul{
@@ -20,15 +21,14 @@
 
 .footer-tagline{
     grid-area: tagline; 
-    text-align: center; 
+    
 }
 
 .footer-services{ 
     grid-area: services;
-    text-align: center;
+    
 }
 
 .footer-contact{
     grid-area: contact; 
-    text-align: center; 
 }
