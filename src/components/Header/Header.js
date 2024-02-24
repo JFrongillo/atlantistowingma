@@ -31,7 +31,7 @@ export default function Header() {
             <li onClick={toggleDropdown} class = {isDropdownOpen ? `active` : ''}>Services</li>
             {isDropdownOpen && (
               <ul class="dropdown-menu">
-                <li><Link to = "/towing">Towing</Link></li>
+                <li><Link to = "/services/towing">Towing</Link></li>
                 <li>Storage</li>
                 <li>Tire Change</li>
                 <li>Mechanical Works</li>
@@ -61,7 +61,7 @@ export default function Header() {
               <li onClick={toggleDropdown}>Services</li>
               {isDropdownOpen && (
                 <ul class="dropdown-menu-mobile">
-                  <li><Link to = "/towing">Towing</Link></li>
+                  <li><Link to = "/services/towing">Towing</Link></li>
                   <li>Storage</li>
                   <li>Tire Change</li>
                   <li>Mechanical Works</li>

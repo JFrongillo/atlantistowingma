@@ -21,7 +21,7 @@ export default function App() {
             <Routes>
                 <Route path="/" element={<Main />} />
                 <Route path="/about" element={<About />} />
-                <Route path="/towing" element={<Towing />} />
+                <Route path="/services/towing" element={<Towing />} />
                 <Route path="*" element={<NotFound/>} />
             </Routes>
         </div>
