@@ -1,0 +1,31 @@
+.tire-hero{
+    grid-area: head;
+    position: relative; 
+    background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url(./images/pexels-pixabay-63294.jpg);
+    background-size: cover; 
+    background-position: center;
+    height: 45vh;
+    width: 100%; 
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;  
+}
+
+.tire-hero h1{
+    color: white; 
+    margin: 0.5em 0; 
+    font-size: 5em;
+    text-align: center;
+}
+
+.tire-content-container{
+    display: grid; 
+    gap: .5rem; 
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas:". section .";
+}
+
+.tire-content{
+    grid-area: section;
+}

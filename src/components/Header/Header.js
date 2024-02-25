@@ -14,8 +14,6 @@ export default function Header() {
     setIsMobileOpen(!isMobileOpen);
   }
 
-
-
   return (
     <div class="header-container">
       <div class="header-item">
