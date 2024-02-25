@@ -32,10 +32,10 @@ export default function Header() {
             {isDropdownOpen && (
               <ul class="dropdown-menu">
                 <li><Link to = "/services/towing">Towing</Link></li>
-                <li>Storage</li>
-                <li>Tire Change</li>
-                <li>Mechanical Works</li>
-                <li>Collison Repair</li>
+                <li><Link to = "/services/storage">Storage</Link></li>
+                <li><Link to = "/services/tire-change">Tire Change</Link></li>
+                <li><Link to = "/services/mechanical-works">Mechanical Works</Link></li>
+                <li><Link to = "/services/collison-repair">Collison Repair</Link></li>
               </ul>
             )}
           </div>
@@ -62,10 +62,10 @@ export default function Header() {
               {isDropdownOpen && (
                 <ul class="dropdown-menu-mobile">
                   <li><Link to = "/services/towing">Towing</Link></li>
-                  <li>Storage</li>
-                  <li>Tire Change</li>
-                  <li>Mechanical Works</li>
-                  <li>Collison Repair</li>
+                  <li><Link to = "/services/storage">Storage</Link></li>
+                  <li><Link to = "/services/tire-change">Tire Change</Link></li>
+                  <li><Link to = "/services/mechanical-works">Mechanical Works</Link></li>
+                  <li><Link to = "/services/collison-repair">Collison Repair</Link></li>
                 </ul>
               )}
             </div>

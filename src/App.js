@@ -9,6 +9,10 @@ import Footer from './components/Footer/Footer';
 import Main from './pages/main/Main';
 import About from './pages/about/About';
 import Towing from './pages/towing/Towing';
+import Storage from './pages/storage/Storage';
+import TireChange from './pages/tire-change/TireChange';
+import MechanicalWorks from './pages/mechanical-works/Mechanical';
+import CollisionRepair from './pages/collison-repair/Collison';
 
 //Importing error page
 import NotFound from './pages/404/NotFound';
@@ -22,6 +26,10 @@ export default function App() {
                 <Route path="/" element={<Main />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/services/towing" element={<Towing />} />
+                <Route path="/services/storage" element={<Storage />} />
+                <Route path="/services/tire-change" element={<TireChange />} />
+                <Route path="/services/mechanical" element={<MechanicalWorks />} />
+                <Route path="/services/collision" element={<CollisionRepair />} />
                 <Route path="*" element={<NotFound/>} />
             </Routes>
         </div>
