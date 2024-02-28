@@ -1,7 +1,7 @@
 .tire-hero{
     grid-area: head;
     position: relative; 
-    background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url(./images/pexels-pixabay-63294.jpg);
+    background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url(./images/pexels-andrea-piacquadio-3807386.jpg);
     background-size: cover; 
     background-position: center;
     height: 45vh;

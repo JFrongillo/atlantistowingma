@@ -28,8 +28,8 @@ export default function App() {
                 <Route path="/services/towing" element={<Towing />} />
                 <Route path="/services/storage" element={<Storage />} />
                 <Route path="/services/tire-change" element={<TireChange />} />
-                <Route path="/services/mechanical" element={<MechanicalWorks />} />
-                <Route path="/services/collision" element={<CollisionRepair />} />
+                <Route path="/services/mechanical-works" element={<MechanicalWorks />} />
+                <Route path="/services/collision-repair" element={<CollisionRepair />} />
                 <Route path="*" element={<NotFound/>} />
             </Routes>
         </div>
