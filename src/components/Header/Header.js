@@ -33,7 +33,7 @@ export default function Header() {
                 <li><Link to = "/services/storage">Storage</Link></li>
                 <li><Link to = "/services/tire-change">Tire Change</Link></li>
                 <li><Link to = "/services/mechanical-works">Mechanical Works</Link></li>
-                <li><Link to = "/services/collison-repair">Collison Repair</Link></li>
+                <li><Link to = "/services/collision-repair">Collision Repair</Link></li>
               </ul>
             )}
           </div>
@@ -63,7 +63,7 @@ export default function Header() {
                   <li><Link to = "/services/storage">Storage</Link></li>
                   <li><Link to = "/services/tire-change">Tire Change</Link></li>
                   <li><Link to = "/services/mechanical-works">Mechanical Works</Link></li>
-                  <li><Link to = "/services/collison-repair">Collison Repair</Link></li>
+                  <li><Link to = "/services/collision-repair">Collision Repair</Link></li>
                 </ul>
               )}
             </div>

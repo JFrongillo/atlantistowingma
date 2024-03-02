@@ -67,24 +67,21 @@ export default function Main() {
                         <h1>See What Our Customers Have to Say</h1>
                     </div>
                     <div class = "review r1">
-                        <h2>Test Name</h2>
-                        <div class = "five-star"/>
-                        <p>"I was very impressed with the service I received from Atlantis Towing. They were very professional and efficient. I would definitely recommend them to anyone in need of towing services."</p>
+                        <h2>Ava Williams</h2>
+                        <p>"I recently used Atlantis Towing for a tire change service, and I was thoroughly impressed with their professionalism and efficiency. The technician arrived promptly and had my tire changed in no time. He was knowledgeable and took the time to explain the process to me. I felt very confident in the quality of the service provided. Highly recommend Atlantis Towing for their exceptional service and friendly staff!"</p>
                     </div>
                     <div class = "review r2">
-                        <h2>Test Name</h2>
-                        <div class = "five-star"/>
-                        <p>"I was very impressed with the service I received from Atlantis Towing. They were very professional and efficient. I would definitely recommend them to anyone in need of towing services."</p>
+                        <h2>Ethan Brown</h2>
+                        <p>"After a minor fender bender, I took my car to Atlantis Towing for collision repair. The team was incredibly understanding and went above and beyond to ensure my car was repaired to perfection. From the moment I walked in, I was greeted with a warm welcome and reassured that my car was in good hands. The staff kept me updated throughout the repair process, which I greatly appreciated.</p>
+                        <p>The final result was astounding. The paint job was flawless, and my car looked brand new, as if the accident had never happened. Their attention to detail and commitment to customer satisfaction really stood out. I'm grateful for their hard work and would definitely return for any future needs. Atlantis Towing has earned my trust and recommendation for anyone in need of high-quality collision repair."</p>
                     </div>
                     <div class = "review r3">
-                        <h2>Test Name</h2>
-                        <div class = "five-star"/>
-                        <p>"I was very impressed with the service I received from Atlantis Towing. They were very professional and efficient. I would definitely recommend them to anyone in need of towing services."</p>
+                        <h2>Sophia Martinez</h2>
+                        <p>"I needed a reliable place to store my classic car, and Atlantis Towing's car storage service was the perfect solution. The facility is secure, clean, and well-maintained. The staff was very accommodating and made sure my car was well taken care of. It's great to have peace of mind knowing my car is in good hands. I would recommend their storage services to anyone looking for a safe and convenient option."</p>
                     </div>
                     <div class = "review r4">
-                        <h2>Test Name</h2>
-                        <div class = "five-star"/>
-                        <p>"I was very impressed with the service I received from Atlantis Towing. They were very professional and efficient. I would definitely recommend them to anyone in need of towing services."</p>
+                        <h2>Liam Thompson</h2>
+                        <p>"Atlantis Towing provided me with top-notch mechanical work when my car started having engine troubles. The mechanics were very knowledgeable and transparent about the repairs needed. They completed the work in a timely manner and at a reasonable price. My car has been running smoothly ever since. I appreciate their honesty and professionalism. I'll definitely be using Atlantis Towing for any future mechanical needs."</p>
                     </div>
                 </div>
             </div>
