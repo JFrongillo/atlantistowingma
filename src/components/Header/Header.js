@@ -1,6 +1,5 @@
 import './Header.css';
 import React,  {useState}from 'react';
-import { Link } from 'react-router-dom';
 
 export default function Header() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -22,18 +21,18 @@ export default function Header() {
       
       <div class="header-item">
         <ul class = "nav-items">
-          <li><Link to = "/">Home</Link></li>
-          <li><Link to = "/about">About Us</Link></li>
-          <li><Link to = "/#testimonials">Testimonials</Link></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About Us</a></li>
+          <li><a href="/#testimonials">Testimonials</a></li>
           <div class="dropdown-container">
             <li onClick={toggleDropdown} class = {isDropdownOpen ? `active` : ''}>Services</li>
             {isDropdownOpen && (
               <ul class="dropdown-menu">
-                <li><Link to = "/services/towing">Towing</Link></li>
-                <li><Link to = "/services/storage">Storage</Link></li>
-                <li><Link to = "/services/tire-change">Tire Change</Link></li>
-                <li><Link to = "/services/mechanical-works">Mechanical Works</Link></li>
-                <li><Link to = "/services/collision-repair">Collision Repair</Link></li>
+                <li><a href='/services/towing'>Towing</a></li>
+                <li><a href='/services/storage'>Storage</a></li>
+                <li><a href='/services/tire-change'>Tire Change</a></li>
+                <li><a href='/services/mechanical-works'>Mechanical Works</a></li>
+                <li><a href='/services/collision-repair'>Collision Repair</a></li>
               </ul>
             )}
           </div>
@@ -51,24 +50,24 @@ export default function Header() {
 
       {isMobileOpen && (
         <div class="mobile-menu">
-          <ul class="mobile-menu-items">
-          <li><Link to = "/">Home</Link></li>
-          <li><Link to = "/about">About Us</Link></li>
-          <li><Link to = "/#testimonials">Testimonials</Link></li>
-            <div class="dropdown-container-mobile">
-              <li onClick={toggleDropdown}>Services</li>
-              {isDropdownOpen && (
-                <ul class="dropdown-menu-mobile">
-                  <li><Link to = "/services/towing">Towing</Link></li>
-                  <li><Link to = "/services/storage">Storage</Link></li>
-                  <li><Link to = "/services/tire-change">Tire Change</Link></li>
-                  <li><Link to = "/services/mechanical-works">Mechanical Works</Link></li>
-                  <li><Link to = "/services/collision-repair">Collision Repair</Link></li>
-                </ul>
-              )}
-            </div>
-          </ul>
-        </div>
+        <ul class="mobile-menu-items">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About Us</a></li>
+          <li><a href="/#testimonials">Testimonials</a></li>
+          <div class="dropdown-container-mobile">
+            <li onClick={toggleDropdown}>Services</li>
+            {isDropdownOpen && (
+              <ul class="dropdown-menu-mobile">
+                <li><a href='/services/towing'>Towing</a></li>
+                <li><a href='/services/storage'>Storage</a></li>
+                <li><a href='/services/tire-change'>Tire Change</a></li>
+                <li><a href='/services/mechanical-works'>Mechanical Works</a></li>
+                <li><a href='/services/collision-repair'>Collision Repair</a></li>
+              </ul>
+            )}
+          </div>
+        </ul>
+      </div>
       )}
     </div>
   );
