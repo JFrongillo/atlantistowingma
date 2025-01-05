@@ -28,7 +28,7 @@ export default function Main() {
                         <div class="card-text">
                             <h2>Towing</h2>
                             <p>With our reliable towing service and wide fleet of veichles, we can tow: cars, trucks, SUV's, minivans, and even trucks that transport water tanks.</p>
-                            <a href = "#">Get a Quote!</a>
+                            <a href = "/services/towing">Get a Quote!</a>
                         </div>
                     </div>
                     <div class="services-card">
@@ -36,7 +36,7 @@ export default function Main() {
                         <div class="card-text">
                             <h2>Storage</h2>
                             <p>Benefit from our secure vehicle storage services, offering advanced security and full legal compliance for both short-term and long-term needs.</p>
-                            <a href = "#">Store with us today!</a>
+                            <a href = "/services/storage">Store with us today!</a>
                         </div>
                     </div>
                     <div class="services-card">
@@ -44,7 +44,7 @@ export default function Main() {
                         <div class="card-text">
                             <h2>Tire Changes</h2>
                             <p>Our rapid roadside assistance service efficiently handles flat tires, battery jumps, and fuel deliveries, ensuring you're back on the road swiftly!</p>
-                            <a href = "#">Call us Today!</a>
+                            <a href = "/services/towing">Call us Today!</a>
                         </div>
                     </div>
                     <div class="services-card">
@@ -52,7 +52,7 @@ export default function Main() {
                         <div class="card-text">
                             <h2>Vehicle Repairs</h2>
                             <p>Our in-house mechanic shop features skilled technicians for comprehensive repair and maintenance, ensuring your vehicle's optimal performance.</p>
-                            <a href = "#">Contact Us Today!</a>
+                            <a href = "/services/mechanical-works">Contact Us Today!</a>
                         </div>
                     </div>
                 </div>

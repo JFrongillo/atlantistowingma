@@ -1,9 +1,10 @@
 .footer-container{
     display: grid; 
-    gap: 1rem;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: .5rem;
+    grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
     grid-template-areas: ". tagline services contact . ";
     text-align: center;
+    padding: 10px; 
 }
 
 .footer-container ul{
