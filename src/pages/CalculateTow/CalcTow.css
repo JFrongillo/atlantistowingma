@@ -1,0 +1,138 @@
+/* Header Styling */
+.tow-calc__header {
+    text-align: center;
+    background-color: #444;
+    color: white;
+    padding: 20px;
+    border-bottom: 5px solid #222;
+  }
+  
+  .tow-calc__heading {
+    margin: 0;
+    font-size: 2rem;
+  }
+  
+  .tow-calc__description {
+    font-size: 1.2rem;
+  }
+  
+  /* Main Container */
+  .tow-calc__main {
+    max-width: 800px;
+    margin: 20px auto;
+    color: black;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  /* Map Section */
+  .no-map {
+    text-align: center;
+    padding: 20px;
+    background: #ddd;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  /* Address Text */
+  .address-text-container {
+    padding: 15px;
+    background: #e0e0e0;
+    border-radius: 5px;
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  .address-text {
+    font-weight: bold;
+  }
+  
+  /* Input Area */
+  .input-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .input-collection {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  .input-collection input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    background: #f9f9f9;
+    box-sizing: border-box;
+  }
+  
+  .input-collection button,
+  .input-area button {
+    width: 100%;
+    background-color: #666;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    box-sizing: border-box;
+  }
+  
+  .input-collection button:hover,
+  .input-area button:hover {
+    background-color: #333;
+  }
+  
+  /* Align Set Pickup and Set Destination Buttons Side by Side */
+  .input-collection .button-group {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+  }
+  
+  .input-collection .button-group button {
+    flex: 1;
+  }
+  
+  /* Total Charges Section */
+  .total-cost-item {
+    background: #ccc;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .total-cost-item h2 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #444;
+  }
+  
+  .total-cost-item p {
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .tow-calc__main {
+      padding: 15px;
+    }
+    .input-collection {
+      width: 100%;
+    }
+    .input-collection .button-group {
+      flex-direction: column;
+      align-items: center;
+    }
+  }

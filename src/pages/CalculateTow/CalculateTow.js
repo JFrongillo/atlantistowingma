@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef, useMemo } from "react";
 import { APIProvider, Map, AdvancedMarker } from "@vis.gl/react-google-maps";
 import { getCords, getDistance, getAddress } from "../../api";
+import "./CalcTow.css";
 
 const API_KEY = "AIzaSyAEaWgxrDc6poSuoswkQlBiG4cEoqBkl0o";
 
@@ -25,7 +26,7 @@ export default function CalculateTow() {
 
   //price logic
   const [hasTolls, setHasTolls] = useState(false);
-  const [tollFee, setTollFee] = useState(0);
+  //const [tollFee, setTollFee] = useState(0);
   const [totalCost, setTotalCost] = useState(0);
   const [totalMiles, setMiles] = useState(0.0);
   const mapRef = useRef(null);
@@ -38,10 +39,11 @@ export default function CalculateTow() {
   const HOOKUP_FEE = 75;
 
   const mapLoaded = useMemo(() => {
-    return isPositionLoaded && destination.lat !== 0.0 && destination.lng !== 0.0;
+    return (
+      isPositionLoaded && destination.lat !== 0.0 && destination.lng !== 0.0
+    );
   }, [isPositionLoaded, destination]);
   /*Upon render of the page, geolocate the user and set their current location.*/
-  /* Upon render of the page, geolocate the user and set their current location. */
   useEffect(() => {
     var options = {
       enableHighAccuracy: true,
@@ -84,7 +86,6 @@ export default function CalculateTow() {
       mapRef.current.fitBounds(bounds);
     }
   }, [currentPosition, destination]);
-
 
   async function fetchAddress(lat, lng) {
     console.log(lat, lng);
@@ -207,6 +208,7 @@ export default function CalculateTow() {
 
         // Use updated position to recalculate distance
         fetchDistance(newCurrentPosition, destination);
+        setCurrentAddress("");
       } else {
         alert("Could not find this location, try again.");
       }
@@ -223,7 +225,7 @@ export default function CalculateTow() {
 
   // Calculate zoom level based on the distance in miles
   const calculateZoomLevel = (distanceInMiles) => {
-    let zoomLevel = 10;
+    let zoomLevel = 5;
 
     if (distanceInMiles < 1) {
       zoomLevel = 18; // Very close, zoom in
@@ -231,8 +233,10 @@ export default function CalculateTow() {
       zoomLevel = 14; // Short distance
     } else if (distanceInMiles < 50) {
       zoomLevel = 12; // Medium distance
-    } else {
+    } else if (distanceInMiles < 100) {
       zoomLevel = 10; // Long distance
+    } else {
+      zoomLevel = 5;
     }
 
     return zoomLevel;
@@ -240,92 +244,113 @@ export default function CalculateTow() {
 
   return (
     <>
-      <div style={{ padding: "1rem" }}>
-        <h1>Tow Cost Calculator</h1>
-        <p>
-          Ever wondered how much a roadside service would cost? Now you don't
-          have to.
+      <header class="tow-calc__header">
+        <h1 class="tow-calc__heading">Tow Cost Calculator</h1>
+        <p class="tow-calc__description">
+          Before you call, calculate how much your service is going to cost!
         </p>
-      </div>
-      <APIProvider apiKey={API_KEY}>
-      {mapLoaded && (
-          <MapWithRef
-            ref={mapRef}
-            style={{ width: "100vw", height: "60vh" }}
-            zoom={calculateZoomLevel(totalMiles)}
-            center={calculateMidpoint(currentPosition, destination)}
-            gestureHandling={"none"}
-            disableDefaultUI={true}
-            mapId="dadfca6709ffa47"
-            options={{
-              clickableIcons: false,    // Disable clicking on icons/markers
-              draggable: false,         // Disable dragging
-              zoomControl: false,       // Disable zoom control
-              scrollwheel: false,       // Disable scroll zooming
-              disableDoubleClickZoom: true, // Disable double-click zoom
-              styles: [
-                {
-                  featureType: "poi",
-                  elementType: "all",
-                  stylers: [
+      </header>
+      <main class="tow-calc__main">
+        <section>
+          <APIProvider apiKey={API_KEY}>
+            {mapLoaded ? (
+              <MapWithRef
+                ref={mapRef}
+                style={{ height: "60vh" }}
+                zoom={calculateZoomLevel(totalMiles)}
+                center={calculateMidpoint(currentPosition, destination)}
+                gestureHandling={"none"}
+                disableDefaultUI={true}
+                mapId="dadfca6709ffa47"
+                options={{
+                  clickableIcons: false, // Disable clicking on icons/markers
+                  draggable: false, // Disable dragging
+                  zoomControl: false, // Disable zoom control
+                  scrollwheel: false, // Disable scroll zooming
+                  disableDoubleClickZoom: true, // Disable double-click zoom
+                  styles: [
                     {
-                      visibility: "off",
+                      featureType: "poi",
+                      elementType: "all",
+                      stylers: [
+                        {
+                          visibility: "off",
+                        },
+                      ],
+                    },
+                    {
+                      featureType: "poi.business",
+                      elementType: "labels",
+                      stylers: [
+                        {
+                          visibility: "off",
+                        },
+                      ],
                     },
                   ],
-                },
-                {
-                  featureType: "poi.business",
-                  elementType: "labels",
-                  stylers: [
-                    {
-                      visibility: "off",
-                    },
-                  ],
-                },
-              ],
-            }}
-          >
-            <AdvancedMarker position={currentPosition} />
-            {destination.lat !== 0.0 && destination.lng !== 0.0 && (
-              <AdvancedMarker position={destination} />
+                }}
+              >
+                <AdvancedMarker position={currentPosition} />
+                {destination.lat !== 0.0 && destination.lng !== 0.0 && (
+                  <AdvancedMarker position={destination} />
+                )}
+              </MapWithRef>
+            ) : (
+              <div class="no-map">
+                <h1>Enter in a destination Address to show map</h1>
+                <p>
+                  If your address shown is wrong, enter in a new pickup address.
+                </p>
+                <p>
+                  Don't know your address? <br /> Press the refresh location
+                  button to get your location <br /> Make sure you have location
+                  services enabled on your device!
+                </p>
+              </div>
             )}
-          </MapWithRef>
-        )}
-      </APIProvider>
-
-      <input
-        type="text"
-        placeholder="Enter destination address"
-        value={address}
-        onChange={(e) => setAddress(e.target.value)}
-      />
-      <button onClick={fetchDestinationCoordinates}>Get Coordianates</button>
-      <button onClick={refreshCurrentlocation}>Refresh Location</button>
-      <input
-        type="text"
-        placeholder="Enter pickup address."
-        value={currentAddress}
-        onChange={(e) => setCurrentAddress(e.target.value)}
-      />
-      <button onClick={manualCurrentLocation}>Set Pickup Address</button>
-
-      <p>Destination Address: {destination.address}</p>
-      <p>
-        Destination Coordinates: {destination.lat}, {destination.lng}
-      </p>
-      <p>Current Location Address: {currentPosition.address}</p>
-      <p>
-        Current Coordinates: {currentPosition.lat}, {currentPosition.lng}
-      </p>
-      <p>Distance: {totalMiles} mi</p>
-      <div className="total-cost-item">
-        <h2>Total Charges</h2>
-        <p>Total Miles: {Number(totalMiles).toFixed(2)} mi</p>
-        <p>Base Miles (10 mi): {Math.min(totalMiles, 10).toFixed(2)} mi</p>
-        <p>Deadhead Miles: {Math.max(totalMiles - 10, 0).toFixed(2)} mi</p>
-        <p>Has Tolls? {hasTolls ? "Yes" : "No"}</p>
-        <p>Total cost: ${totalCost.toFixed(2)}</p>
-      </div>
+          </APIProvider>
+          <div class="address-text-container">
+            <p class="address-text">
+              Current Address: {currentPosition.address}
+            </p>
+            <p class="address-text">
+              Destination Address: {destination.address}
+            </p>
+            <div>
+              <p>Distance: {totalMiles} mi</p>
+            </div>
+          </div>
+          <div className="input-area">
+            <button onClick={refreshCurrentlocation}>Refresh Location</button>
+            <div className="input-collection">
+            <input
+              type="text"
+              placeholder="Enter pickup address."
+              value={currentAddress}
+              onChange={(e) => setCurrentAddress(e.target.value)}
+            />
+            <button onClick={manualCurrentLocation}>Set Pickup Address</button>
+            <input
+              type="text"
+              placeholder="Enter destination address"
+              value={address}
+              onChange={(e) => setAddress(e.target.value)}
+            />
+            <button onClick={fetchDestinationCoordinates}>
+              Set Destination
+            </button>
+            </div>
+          </div>
+        </section>
+        <section class="total-cost-item">
+          <h2>Total Charges</h2>
+          <p>Total Miles: {Number(totalMiles).toFixed(2)} mi</p>
+          <p>Base Miles (10 mi): {Math.min(totalMiles, 10).toFixed(2)} mi</p>
+          <p>Deadhead Miles: {Math.max(totalMiles - 10, 0).toFixed(2)} mi</p>
+          <p>Has Tolls? {hasTolls ? "Yes" : "No"}</p>
+          <p>Total cost: ${totalCost.toFixed(2)}</p>
+        </section>
+      </main>
     </>
   );
 }
