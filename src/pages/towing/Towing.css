@@ -32,6 +32,25 @@
     grid-area: section;
 }
 
+.button-container{
+    display: flex; 
+    justify-content: center;
+}
+
+.tow-button{
+    padding: 8px 16px; 
+    color: black; 
+    text-decoration: none;
+    background: white; 
+    border-radius: 8px;
+    border: 1px solid white; 
+    font-weight: bold;
+}
+
+.tow-button:hover, .tow-button:active{
+    color: white; 
+    background: black;
+}
 @media (max-width: 768px) {
     .towing-content-container {
         display: flex;  /* Switch to a flexible layout */
