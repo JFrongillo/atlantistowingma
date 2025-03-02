@@ -314,3 +314,17 @@
     background-color: rgba(132, 136, 132, 0.4);
 }
 
+
+@media (max-width: 820px) {
+    .guarantee-text, .reviews-container {
+        display: flex;  /* Switch to a flexible layout */
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center align content */
+        padding: 10px; /* Add padding for better spacing */
+    }
+
+    .guarantee-text > p{
+        padding: 0; 
+    }
+}
+

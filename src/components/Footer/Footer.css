@@ -33,3 +33,25 @@
 .footer-contact{
     grid-area: contact; 
 }
+
+/* Responsive styles for smaller screens */
+@media (max-width: 820px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "tagline"
+            "services"
+            "contact";
+        text-align: center;
+        padding: 20px;
+    }
+
+    .footer-container ul {
+        padding: 0;
+    }
+
+    .footer-container a {
+        display: block; /* Makes links easier to tap */
+        padding: 5px 0;
+    }
+}

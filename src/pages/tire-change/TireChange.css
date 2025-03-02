@@ -29,3 +29,12 @@
 .tire-content{
     grid-area: section;
 }
+
+@media (max-width: 768px) {
+    .towing-content-container {
+        display: flex;  /* Switch to a flexible layout */
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center align content */
+        padding: 10px; /* Add padding for better spacing */
+    }
+}

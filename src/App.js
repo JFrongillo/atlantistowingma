@@ -26,11 +26,11 @@ export default function App() {
 
   const location = useLocation();
 
-  const showHeaderFooter = location.pathname !== "/services/towing/get_towed"; 
+  //const showHeaderFooter = location.pathname !== "/services/towing/get_towed"; 
 
   return (
     <div>
-        {showHeaderFooter && <Header />}
+        { <Header />}
         <div>
             <Routes>
                 <Route path="/" element={<Main />} />
@@ -44,7 +44,7 @@ export default function App() {
                 <Route path="*" element={<NotFound/>} />
             </Routes>
         </div>
-        {showHeaderFooter && <Footer />}
+        { <Footer />}
     </div>
   );
 }

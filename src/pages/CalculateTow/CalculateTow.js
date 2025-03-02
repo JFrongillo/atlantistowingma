@@ -223,24 +223,25 @@ export default function CalculateTow() {
     return { lat, lng };
   };
 
-  // Calculate zoom level based on the distance in miles
   const calculateZoomLevel = (distanceInMiles) => {
     let zoomLevel = 5;
-
+    const screenWidth = window.innerWidth; // Get screen width
+    
     if (distanceInMiles < 1) {
-      zoomLevel = 18; // Very close, zoom in
+      zoomLevel = screenWidth < 768 ? 16 : 18; // Adjust zoom based on mobile
     } else if (distanceInMiles < 10) {
-      zoomLevel = 14; // Short distance
+      zoomLevel = screenWidth < 768 ? 12 : 14;
     } else if (distanceInMiles < 50) {
-      zoomLevel = 12; // Medium distance
+      zoomLevel = screenWidth < 768 ? 10 : 12;
     } else if (distanceInMiles < 100) {
-      zoomLevel = 10; // Long distance
+      zoomLevel = screenWidth < 768 ? 8 : 10;
     } else {
-      zoomLevel = 5;
+      zoomLevel = screenWidth < 768 ? 4 : 5;
     }
-
+  
     return zoomLevel;
   };
+  
 
   return (
     <>
