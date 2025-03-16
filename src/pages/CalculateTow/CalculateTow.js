@@ -322,8 +322,9 @@ export default function CalculateTow() {
             </div>
           </div>
           <div className="input-area">
-            <button onClick={refreshCurrentlocation}>Refresh Location</button>
+            
             <div className="input-collection">
+            <button onClick={refreshCurrentlocation}>Refresh Location</button>
             <input
               type="text"
               placeholder="Enter pickup address."

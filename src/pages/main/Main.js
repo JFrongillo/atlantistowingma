@@ -28,7 +28,7 @@ export default function Main() {
                         <div class="card-text">
                             <h2>Towing</h2>
                             <p>With our reliable towing service and wide fleet of veichles, we can tow: cars, trucks, SUV's, minivans, and even trucks that transport water tanks.</p>
-                            <a href = "/services/towing">Get a Quote!</a>
+                            <a href = "/services/towing/get_towed">Get a Quote!</a>
                         </div>
                     </div>
                     <div class="services-card">
