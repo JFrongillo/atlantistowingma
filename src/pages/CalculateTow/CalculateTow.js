@@ -69,11 +69,22 @@ export default function CalculateTow() {
             console.error("Failed to fetch the address:", error);
           }
         },
-        () => console.log("Unable to retrieve your current location"),
-        options
+        (error) => {
+          if (error.code === error.PERMISSION_DENIED) {
+          console.log("User denied geolocation access.");
+          alert("Please enable location services in your device settings.");
+        } else if (error.code === error.POSITION_UNAVAILABLE) {
+          console.log("Location data is unavailable.");
+        } else if (error.code === error.TIMEOUT) {
+          console.log("Request for location timed out.");
+        } else {
+          console.log("Unknown error:", error);
+        }
+      }
       );
     } else {
       console.log("Geolocation is not supported by this browser.");
+      
     }
   }, []);
 
@@ -226,7 +237,7 @@ export default function CalculateTow() {
   const calculateZoomLevel = (distanceInMiles) => {
     let zoomLevel = 5;
     const screenWidth = window.innerWidth; // Get screen width
-    
+
     if (distanceInMiles < 1) {
       zoomLevel = screenWidth < 768 ? 16 : 18; // Adjust zoom based on mobile
     } else if (distanceInMiles < 10) {
@@ -238,10 +249,9 @@ export default function CalculateTow() {
     } else {
       zoomLevel = screenWidth < 768 ? 4 : 5;
     }
-  
+
     return zoomLevel;
   };
-  
 
   return (
     <>
@@ -322,25 +332,34 @@ export default function CalculateTow() {
             </div>
           </div>
           <div className="input-area">
-            
             <div className="input-collection">
-            <button onClick={refreshCurrentlocation}>Refresh Location</button>
-            <input
-              type="text"
-              placeholder="Enter pickup address."
-              value={currentAddress}
-              onChange={(e) => setCurrentAddress(e.target.value)}
-            />
-            <button onClick={manualCurrentLocation}>Set Pickup Address</button>
-            <input
-              type="text"
-              placeholder="Enter destination address"
-              value={address}
-              onChange={(e) => setAddress(e.target.value)}
-            />
-            <button onClick={fetchDestinationCoordinates}>
-              Set Destination
-            </button>
+              <button onPointerDown={refreshCurrentlocation} onClick={refreshCurrentlocation}>Refresh Location</button>
+              <input
+                type="text"
+                placeholder="Enter pickup address"
+                value={currentAddress}
+                onChange={(e) => setCurrentAddress(e.target.value)}
+              />
+              <button
+                onPointerDown={manualCurrentLocation}
+                onClick={manualCurrentLocation}
+                disabled={!currentAddress.trim()} // Disable if empty
+              >
+                Confirm Pickup Location
+              </button>
+              <input
+                type="text"
+                placeholder="Enter destination address"
+                value={address}
+                onChange={(e) => setAddress(e.target.value)}
+              />
+              <button
+                onPointerDown={fetchDestinationCoordinates}
+                onClick={fetchDestinationCoordinates}
+                disabled={!address.trim()} // Disable if empty
+              >
+                Confirm Destination
+              </button>
             </div>
           </div>
         </section>
