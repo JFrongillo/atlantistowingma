@@ -1,10 +1,11 @@
 .footer-container{
+    border-top: 1px solid white; 
     display: grid; 
     gap: .5rem;
     grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
     grid-template-areas: ". tagline services contact . ";
     text-align: center;
-    padding: 10px; 
+    padding: 20px 10px 10px; 
 }
 
 .footer-container ul{
