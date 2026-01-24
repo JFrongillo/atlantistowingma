@@ -1,9 +1,15 @@
 import React, { useState, useEffect, useRef, useMemo } from "react";
-import { APIProvider, Map, AdvancedMarker } from "@vis.gl/react-google-maps";
+import {
+  APIProvider,
+  Map,
+  AdvancedMarker,
+  Marker,
+} from "@vis.gl/react-google-maps";
 import { getCords, getDistance, getAddress } from "../../api";
 import "./CalcTow.css";
 
-const API_KEY = "AIzaSyAEaWgxrDc6poSuoswkQlBiG4cEoqBkl0o";
+const API_KEY = process.env.REACT_APP_MAPS_API_KEY;
+const MAP_ID = process.env.REACT_APP_GOOGLE_MAP_ID;
 
 export default function CalculateTow() {
   const MapWithRef = React.forwardRef((props, ref) => {
@@ -71,20 +77,20 @@ export default function CalculateTow() {
         },
         (error) => {
           if (error.code === error.PERMISSION_DENIED) {
-          console.log("User denied geolocation access.");
-          alert("Please enable location services in your device settings.");
-        } else if (error.code === error.POSITION_UNAVAILABLE) {
-          console.log("Location data is unavailable.");
-        } else if (error.code === error.TIMEOUT) {
-          console.log("Request for location timed out.");
-        } else {
-          console.log("Unknown error:", error);
-        }
-      }
+            console.log("User denied geolocation access.");
+            alert("Please enable location services in your device settings.");
+          } else if (error.code === error.POSITION_UNAVAILABLE) {
+            console.log("Location data is unavailable.");
+          } else if (error.code === error.TIMEOUT) {
+            console.log("Request for location timed out.");
+          } else {
+            console.log("Unknown error:", error);
+          }
+        },
+        options,
       );
     } else {
       console.log("Geolocation is not supported by this browser.");
-      
     }
   }, []);
 
@@ -193,7 +199,7 @@ export default function CalculateTow() {
           }
         },
         () => console.log("Unable to retrieve your current location"),
-        options
+        options,
       );
     } else {
       console.log("Geolocation is not supported by this browser.");
@@ -272,7 +278,7 @@ export default function CalculateTow() {
                 center={calculateMidpoint(currentPosition, destination)}
                 gestureHandling={"none"}
                 disableDefaultUI={true}
-                mapId="dadfca6709ffa47"
+                mapId={MAP_ID || undefined}
                 options={{
                   clickableIcons: false, // Disable clicking on icons/markers
                   draggable: false, // Disable dragging
@@ -301,9 +307,20 @@ export default function CalculateTow() {
                   ],
                 }}
               >
-                <AdvancedMarker position={currentPosition} />
-                {destination.lat !== 0.0 && destination.lng !== 0.0 && (
-                  <AdvancedMarker position={destination} />
+                {MAP_ID ? (
+                  <>
+                    <AdvancedMarker position={currentPosition} />
+                    {destination.lat !== 0.0 && destination.lng !== 0.0 && (
+                      <AdvancedMarker position={destination} />
+                    )}
+                  </>
+                ) : (
+                  <>
+                    <Marker position={currentPosition} />
+                    {destination.lat !== 0.0 && destination.lng !== 0.0 && (
+                      <Marker position={destination} />
+                    )}
+                  </>
                 )}
               </MapWithRef>
             ) : (
@@ -333,7 +350,12 @@ export default function CalculateTow() {
           </div>
           <div className="input-area">
             <div className="input-collection">
-              <button onPointerDown={refreshCurrentlocation} onClick={refreshCurrentlocation}>Refresh Location</button>
+              <button
+                onPointerDown={refreshCurrentlocation}
+                onClick={refreshCurrentlocation}
+              >
+                Refresh Location
+              </button>
               <input
                 type="text"
                 placeholder="Enter pickup address"
